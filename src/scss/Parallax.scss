@@ -1,0 +1,54 @@
+@use "../global/globalCss/global.scss" as global;
+.parallax {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 0rem 10rem 5rem;
+  .parallax_content_wrapper {
+    max-width: 900px;
+
+    p {
+      font-size: 2rem;
+      max-height: 520px;
+      overflow: scroll;
+    }
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .parallax {
+    width: 100%;
+    padding: 0 4rem 4rem;
+    .parallax_content_wrapper {
+      width: 100% !important;
+      .box_heading {
+        font-size: 4rem !important;
+      }
+      .box_content {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+}
+@media (max-width: global.$mobile) {
+  .parallax {
+    width: 100%;
+    padding: 1rem !important;
+    .parallax_content_wrapper {
+      width: 100% !important;
+      padding: 1.5rem !important;
+      p {
+        font-size: 1.5rem;
+      }
+      .box_heading {
+        font-size: 3rem !important;
+      }
+      .box_content {
+        font-size: 1.2rem !important;
+      }
+    }
+  }
+}

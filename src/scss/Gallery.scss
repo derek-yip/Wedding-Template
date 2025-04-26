@@ -1,0 +1,197 @@
+@use "../global/globalCss/CustomAnime.scss";
+
+@use "../global/globalCss/global.scss" as global;
+.gallery_cover {
+  .gallery {
+    z-index: 2;
+    .gallery_side {
+      position: relative;
+      width: 20vw;
+      .side_content {
+        position: relative;
+        writing-mode: vertical-rl;
+        width: 100%;
+        align-items: flex-start;
+        padding-right: 20px;
+        white-space: nowrap;
+        .side_logo {
+          position: absolute;
+          font-size: 6.5em;
+          top: 0;
+          color: var(--primary_color);
+        }
+        h1,
+        p {
+          margin-top: 8rem;
+        }
+        h1 {
+          text-transform: uppercase;
+          font-size: 5em;
+          font-weight: 800;
+        }
+        p {
+          font-size: 1.5em;
+          margin-right: -15px;
+          font-weight: lighter;
+        }
+      }
+    }
+
+    .gallery_right_wrapper {
+      width: 80vw;
+      display: table-cell;
+      .gallery_img {
+        display: table-cell;
+        columns: 4;
+        gap: 0em;
+
+        .img_wrapper {
+          z-index: 2;
+          position: relative;
+          overflow: hidden;
+          margin-left: 1em;
+          margin-bottom: 1em;
+          max-width: 100%;
+
+          .images {
+            position: relative;
+            z-index: 2;
+            opacity: 0.7;
+            display: block;
+            cursor: pointer;
+            max-width: 100%;
+            max-height: 100%;
+            transition: 0.5s ease-in-out;
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .bottom_content {
+        width: 70%;
+        margin-top: 5rem;
+        border-top: 2px solid black;
+        box-sizing: border-box;
+
+        .content_wrapper {
+          padding: 2rem 0 4em 0;
+          h1 {
+            font-size: 2.5rem;
+            text-align: right;
+          }
+          p {
+            font-size: 1rem;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .gallery_cover {
+    .gallery {
+      .gallery_side {
+        width: 0;
+        .side_content {
+          .side_logo {
+            font-size: 4.5em;
+          }
+          h1,
+          p {
+            margin-top: 5rem;
+          }
+          h1 {
+            text-transform: uppercase;
+            font-size: 5em;
+            font-weight: 800;
+          }
+          p {
+            font-size: 2em;
+            margin-right: -20px;
+          }
+        }
+      }
+      .gallery_right_wrapper {
+        width: 100%;
+        .gallery_img {
+          columns: 2;
+          gap: 0.5rem;
+          .img_wrapper {
+            margin-left: 0rem;
+            margin-bottom: 0.5rem;
+            .images {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: global.$mobile) {
+  .gallery_cover {
+    .gallery {
+      .gallery_side {
+        display: none;
+        width: 0;
+        .side_content {
+          .side_logo {
+            font-size: 6em;
+            top: -10%;
+          }
+          .side_logo {
+            top: 0;
+            font-size: 3.5em;
+          }
+          h1,
+          p {
+            margin-top: 4rem;
+          }
+          h1 {
+            text-transform: uppercase;
+            font-size: 2.5em;
+            font-weight: 800;
+          }
+          p {
+            font-size: 1em;
+            margin-right: -10px;
+          }
+        }
+      }
+
+      .gallery_right_wrapper {
+        width: 100vw;
+        .gallery_img {
+          columns: 2;
+          width: 100%;
+          gap: 0.5rem;
+          .img_wrapper {
+            margin-left: 0rem;
+            margin-bottom: 0.5rem;
+            .images {
+              opacity: 1;
+            }
+          }
+        }
+        .bottom_content {
+          width: 85%;
+          .content_wrapper {
+            padding: 1rem 0 3em 0;
+            h1 {
+              font-size: 2rem;
+            }
+            p {
+              font-size: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

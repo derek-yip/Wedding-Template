@@ -1,0 +1,42 @@
+@use "../global/globalCss/CustomAnime.scss";
+@use "../global/globalCss/global.scss" as global;
+.Home {
+  position: relative;
+  background-color: var(--background_color);
+}
+.video_wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  &:before {
+    height: 100%;
+    width: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: azure;
+    z-index: 5;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .video1 {
+    height: 100vh;
+    width: auto;
+  }
+}
+@media (max-width: global.$mobile) {
+  .video1 {
+    height: 70vh;
+    width: auto;
+  }
+}

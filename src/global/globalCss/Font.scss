@@ -1,0 +1,41 @@
+@use "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap";
+@use "https://fonts.googleapis.com/css2?family=Cormorant+SC&display=swap";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+a {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: lighter;
+  span {
+    color: var(--primary_color);
+  }
+}
+div,
+p,
+span {
+  font-family: "Cormorant SC", serif;
+}
+
+////////////////////////////// Font Setting for AnimeJS animation//////////////////////////////////
+h1,
+h2,
+h3,
+h4,
+h5,
+button,
+a {
+  span {
+    color: var(--primary_color);
+  }
+}
+p > span {
+  color: var(--font_color);
+}
+span {
+  display: inline-block;
+}
+////////////////////////////// Font Setting for AnimeJS animation//////////////////////////////////

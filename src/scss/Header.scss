@@ -1,0 +1,98 @@
+@use "../global/globalCss/global.scss" as global;
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  height: 15vh;
+  width: 100%;
+  padding: 0 3em;
+  color: var(--button_color);
+  transition: 1s all ease-in-out;
+  img {
+    width: 8em;
+    min-height: 100%;
+  }
+  ul {
+    height: 100%;
+    width: 60%;
+    transition: 1s all ease-in-out;
+    li.nav_item a {
+      position: relative;
+      align-items: stretch;
+      font-size: 35px;
+      transition: 1s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+        color: var(--button_active_color);
+      }
+    }
+  }
+}
+.nav_item a.active {
+  position: relative;
+  color: var(--button_active_color);
+  transition: 1s ease-in-out;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: 0;
+    height: 2px;
+    width: 80%;
+    background: var(--button_active_color);
+  }
+  &::after {
+    bottom: -10px;
+    width: 30%;
+    height: 0.5px;
+  }
+}
+
+.header_converted {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.7) 50%,
+    transparent 100%
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header_closed {
+  visibility: hidden;
+  opacity: 0;
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+  .header {
+    ul {
+      li.nav_item a {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .header {
+    ul {
+      li.nav_item a {
+        font-size: 30px;
+      }
+    }
+  }
+}
+@media (max-width: global.$mobile) {
+  .header {
+    padding: 0;
+    height: 10vh;
+    ul {
+      width: 100%;
+      li.nav_item a {
+        font-size: 22px;
+        margin: 0;
+      }
+    }
+  }
+}

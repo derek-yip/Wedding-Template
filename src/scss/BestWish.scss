@@ -1,0 +1,168 @@
+@use "../global/globalCss/global.scss" as global;
+
+.best_wishes_wrapper {
+  width: 100vw;
+  overflow-x: scroll;
+}
+.best_wishes_inner {
+  position: relative;
+  min-height: 300px;
+  width: max-content;
+  align-items: stretch;
+  .Wish_detail {
+    align-items: stretch;
+    background-image: url("https://cdn.wallpapersafari.com/28/3/o0gcUY.jpg");
+    background-size: cover;
+    &:nth-child(even) {
+      background-image: url("https://previews.123rf.com/images/kotkoa/kotkoa1902/kotkoa190200093/125449303-the-marriage-invitation-seamless-pattern-awesome-wedding-invitation-template-gray-sakura-isolated-ov.jpg");
+    }
+    .best_wish {
+      position: relative;
+      width: 350px;
+      padding: 30px;
+      p {
+        position: relative;
+        font-size: 1.5rem;
+        text-align: left;
+        padding-bottom: 25px;
+        &::after,
+        &::before {
+          position: absolute;
+          content: "";
+          bottom: 5px;
+          right: 0;
+          width: 80%;
+          height: 2px;
+          background-color: black;
+        }
+        &::after {
+          width: 40%;
+          bottom: 0px;
+          height: 1.2px;
+        }
+      }
+      .guest_signature {
+        position: relative;
+        width: 100%;
+        text-align: right;
+        margin-top: 20px;
+        span {
+          font-size: 25px;
+          font-weight: 600;
+        }
+        img {
+          width: 120px;
+          aspect-ratio: 16/9;
+        }
+      }
+      .page {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: dimgray;
+        font-size: 120px;
+        font-family: "Cormorant SC", serif;
+        .split {
+          position: relative;
+          top: 10px;
+          right: -5px;
+          font-size: 60px;
+        }
+      }
+    }
+  }
+  .viewMore {
+    position: relative;
+    width: 350px;
+    min-height: 100%;
+    cursor: pointer;
+    transition: 1s all ease-in-out;
+    align-items: stretch;
+    &:hover {
+      background-color: aliceblue;
+    }
+    .viewMore_inner {
+      height: 100%;
+      transition: 1s all ease-in-out;
+      &:hover {
+        animation: ScaleUp 1s alternate infinite;
+        -webkit-animation: ScaleUp 1s alternate infinite;
+        -moz-animation: ScaleUp 1s alternate infinite;
+        -o-animation: ScaleUp 1s alternate infinite;
+      }
+      h1 {
+        font-size: 10rem;
+        margin-bottom: 1rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+}
+@media (max-width: global.$mobile) {
+  .best_wishes_inner {
+    position: relative;
+    .Wish_detail {
+      .best_wish {
+        position: relative;
+        width: 250px;
+        padding: 20px;
+        p {
+          position: relative;
+          font-size: 1.2rem;
+          text-align: left;
+          padding-bottom: 25px;
+        }
+        .guest_signature {
+          position: relative;
+          width: 100%;
+          text-align: right;
+          margin-top: 20px;
+          span {
+            font-size: 20px;
+            font-weight: 600;
+          }
+          img {
+            width: 80px;
+            aspect-ratio: 16/9;
+          }
+        }
+        .page {
+          position: absolute;
+          bottom: 40px;
+          left: 20px;
+          color: dimgray;
+          font-size: 80px;
+          font-family: "Cormorant SC", serif;
+          .split {
+            position: relative;
+            top: 10px;
+            right: -5px;
+            font-size: 60px;
+          }
+        }
+      }
+    }
+    .viewMore {
+      position: relative;
+      width: 250px;
+      padding: 20px;
+      cursor: pointer;
+      .viewMore_inner {
+        h1 {
+          font-size: 6rem;
+          margin-bottom: 1rem;
+        }
+        h2 {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}

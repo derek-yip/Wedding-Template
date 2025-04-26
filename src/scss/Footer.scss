@@ -1,0 +1,22 @@
+@use "../global/globalCss/CustomAnime.scss";
+@use "../global/globalCss/global.scss" as global;
+.footer {
+  z-index: 999;
+  padding: 0.5rem 0;
+  background-color: var(--background_color);
+  p {
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+}
+@media (max-width: global.$mobile) {
+  .footer {
+    height: 4rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,288 @@
+@use "../global/globalCss/global.scss" as global;
+.lightbox_wrapper {
+  position: fixed;
+  z-index: 999999;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: 1s all ease-in-out;
+  .lightbox {
+    position: relative;
+    .lightbox_inner {
+      position: relative;
+      height: 100%;
+      object-fit: contain;
+      img {
+        max-height: 99%;
+        object-fit: contain;
+      }
+      button {
+        position: fixed;
+        top: 2rem;
+        right: 2rem;
+        padding: 3px 6px;
+        background-color: var(--primary_color);
+        color: var(--font_color);
+        font-weight: bold;
+        border: 1px solid transparent;
+        border-radius: 20%;
+        font-size: 1em;
+        transition: 1s ease-in-out;
+        z-index: 999999;
+        cursor: pointer;
+        &:hover {
+          background-color: var(--secondary_color);
+        }
+      }
+      .bestwishes {
+        display: grid;
+        grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        gap: 1rem 1rem;
+        padding: 1rem;
+        place-items: center;
+        cursor: default;
+        .square_wrapper {
+          min-width: 350px;
+          width: 350px;
+          background-image: url("https://cdn.wallpapersafari.com/28/3/o0gcUY.jpg");
+          &:nth-child(even) {
+            background-image: url("https://previews.123rf.com/images/kotkoa/kotkoa1902/kotkoa190200093/125449303-the-marriage-invitation-seamless-pattern-awesome-wedding-invitation-template-gray-sakura-isolated-ov.jpg");
+          }
+          .best_wish {
+            position: relative;
+            padding: 30px;
+            p {
+              position: relative;
+              font-size: 1.5rem;
+              text-align: left;
+              padding-bottom: 25px;
+              &::after,
+              &::before {
+                position: absolute;
+                content: "";
+                bottom: 5px;
+                right: 0;
+                width: 80%;
+                height: 2px;
+                background-color: black;
+              }
+              &::after {
+                width: 40%;
+                bottom: 0px;
+                height: 1.2px;
+              }
+            }
+            .guest_signature {
+              position: relative;
+              width: 100%;
+              text-align: right;
+              margin-top: 20px;
+              span {
+                font-size: 25px;
+                font-weight: 600;
+              }
+              img {
+                width: 120px;
+                aspect-ratio: 16/9;
+              }
+            }
+            .page {
+              position: absolute;
+              bottom: 20px;
+              left: 20px;
+              color: dimgray;
+              font-size: 120px;
+              font-family: "Cormorant SC", serif;
+              .split {
+                position: relative;
+                top: 10px;
+                right: -5px;
+                font-size: 60px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.lightbox_open {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .lightbox_wrapper {
+    .lightbox {
+      .lightbox_inner {
+        img {
+          max-height: 99%;
+          object-fit: contain;
+        }
+        button {
+          position: fixed;
+          top: 2rem;
+          right: 2rem;
+          padding: 3px 6px;
+          background-color: var(--primary_color);
+          color: var(--font_color);
+          font-weight: bold;
+          border: 1px solid transparent;
+          border-radius: 20%;
+          font-size: 1em;
+          transition: 1s ease-in-out;
+          z-index: 999999;
+          cursor: pointer;
+          &:hover {
+            background-color: var(--secondary_color);
+          }
+        }
+        .bestwishes {
+          display: grid;
+          grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+          gap: 1rem 1rem;
+          padding: 1rem;
+          place-items: center;
+          align-items: stretch;
+          cursor: default;
+          .square_wrapper {
+            min-width: 350px;
+            background-image: url("https://cdn.wallpapersafari.com/28/3/o0gcUY.jpg");
+            &:nth-child(even) {
+              background-image: url("https://previews.123rf.com/images/kotkoa/kotkoa1902/kotkoa190200093/125449303-the-marriage-invitation-seamless-pattern-awesome-wedding-invitation-template-gray-sakura-isolated-ov.jpg");
+            }
+            .best_wish {
+              position: relative;
+              padding: 30px;
+              p {
+                position: relative;
+                font-size: 1.5rem;
+                text-align: left;
+                padding-bottom: 25px;
+                &::after,
+                &::before {
+                  position: absolute;
+                  content: "";
+                  bottom: 5px;
+                  right: 0;
+                  width: 80%;
+                  height: 2px;
+                  background-color: black;
+                }
+                &::after {
+                  width: 40%;
+                  bottom: 0px;
+                  height: 1.2px;
+                }
+              }
+              .guest_signature {
+                position: relative;
+                width: 100%;
+                text-align: right;
+                margin-top: 20px;
+                span {
+                  font-size: 25px;
+                  font-weight: 600;
+                }
+                img {
+                  width: 120px;
+                  aspect-ratio: 16/9;
+                }
+              }
+              .page {
+                position: absolute;
+                bottom: 20px;
+                left: 20px;
+                color: dimgray;
+                font-size: 120px;
+                font-family: "Cormorant SC", serif;
+                .split {
+                  position: relative;
+                  top: 10px;
+                  right: -5px;
+                  font-size: 60px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: global.$mobile) {
+  .bestwishes {
+    display: flex !important;
+    flex-direction: column;
+    columns: 1 !important;
+    .square_wrapper {
+      // width: 350px;
+      .best_wish {
+        position: relative;
+        width: 350px;
+        padding: 30px;
+        background-image: url("https://cdn.wallpapersafari.com/28/3/o0gcUY.jpg");
+        background-size: cover;
+        &:nth-child(even) {
+          background-image: url("https://previews.123rf.com/images/kotkoa/kotkoa1902/kotkoa190200093/125449303-the-marriage-invitation-seamless-pattern-awesome-wedding-invitation-template-gray-sakura-isolated-ov.jpg");
+        }
+        p {
+          position: relative;
+          font-size: 1.5rem;
+          text-align: left;
+          padding-bottom: 25px;
+          &::after,
+          &::before {
+            position: absolute;
+            content: "";
+            bottom: 5px;
+            right: 0;
+            width: 80%;
+            height: 2px;
+            background-color: black;
+          }
+          &::after {
+            width: 40%;
+            bottom: 0px;
+            height: 1.2px;
+          }
+        }
+        .guest_signature {
+          position: relative;
+          width: 100%;
+          text-align: right;
+          margin-top: 20px;
+          span {
+            font-size: 25px;
+            font-weight: 600;
+          }
+          img {
+            width: 120px;
+            aspect-ratio: 16/9;
+          }
+        }
+        .page {
+          position: absolute;
+          bottom: 20px;
+          left: 20px;
+          color: dimgray;
+          font-size: 120px;
+          font-family: "Cormorant SC", serif;
+          .split {
+            position: relative;
+            top: 10px;
+            right: -5px;
+            font-size: 60px;
+          }
+        }
+      }
+    }
+  }
+}

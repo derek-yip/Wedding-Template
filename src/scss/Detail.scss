@@ -1,0 +1,36 @@
+@use "../global/globalCss/CustomAnime.scss";
+@use "../global/globalCss/global.scss" as global;
+.event_parties_wrapper {
+  background-image: url("../photos/Background/bk_menu.png");
+  .event_parties {
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 0;
+    h1 {
+      margin-top: 2rem;
+      font-size: 2rem;
+      color: black;
+      transition: 0.5s all ease-in-out;
+      &:hover {
+        transform: scale(1.5);
+        cursor: pointer;
+      }
+      &:first-child {
+        font-weight: 800;
+        color: brown;
+        &:hover {
+          transform: none;
+          cursor: default;
+          margin: 2rem 0 0 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+}
+@media (max-width: global.$mobile) {
+}

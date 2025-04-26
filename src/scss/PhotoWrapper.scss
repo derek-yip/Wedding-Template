@@ -1,0 +1,91 @@
+@use "../global/globalCss/global.scss" as global;
+.photo_wrapper {
+  overflow: visible;
+  .photo_inner {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    transition: 0.5s all ease-in-out;
+    .photo {
+      position: relative;
+      height: 100%;
+      transition: 1s all ease-in-out;
+      margin-right: 10%;
+      z-index: 1;
+      aspect-ratio: 2/3;
+      background-size: cover !important;
+      &:hover {
+        z-index: 2;
+        transform: scale(1.2) !important;
+      }
+    }
+    h1 {
+      position: relative;
+      font-size: 6rem;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .photo_wrapper {
+    padding: 2rem 3rem !important;
+    .photo_inner {
+      padding: 0 !important;
+      height: 50vh !important;
+      margin: 0 !important;
+      .photo {
+        transform: rotate(0) scale(1) translate(0, 0) !important;
+        &:hover {
+          z-index: 2;
+          transform: scale(1.1) !important;
+        }
+      }
+      h1 {
+        font-size: 5rem !important;
+      }
+    }
+  }
+}
+@media (max-width: global.$mobile) {
+  .photo_wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+    .photo_inner {
+      justify-content: center;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0 !important;
+      margin: 0 !important;
+      height: 100vh !important;
+      .photo {
+        height: 100%;
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-size: cover !important;
+        transform: rotate(0) scale(1) translate(0, 0) !important;
+        &:hover {
+          z-index: 0;
+          transform: none !important;
+          filter: brightness(0.5);
+          visibility: visible;
+        }
+      }
+      h1 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: max-content;
+        width: max-content;
+        font-size: 5rem;
+        color: whitesmoke !important;
+      }
+    }
+  }
+}

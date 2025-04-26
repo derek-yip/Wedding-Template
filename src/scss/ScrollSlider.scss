@@ -1,0 +1,164 @@
+@use "../global/globalCss/global.scss" as global;
+
+.slide_wrapper {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background-color: var(--background_color);
+  .block {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    .outer,
+    .inner {
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      aspect-ratio: 16/9;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+    }
+    .outer:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      opacity: 0.6;
+    }
+    .inner {
+      position: relative;
+      padding: 5rem;
+      h1 {
+        font-size: 6rem;
+      }
+      .detail {
+        max-width: 900px;
+        p {
+          font-size: 2.5rem;
+        }
+        .text {
+          font-size: 2rem;
+          max-width: 800px;
+          text-transform: capitalize;
+          margin-top: 2rem;
+        }
+        .detail_additional {
+          margin-top: 2rem;
+          span {
+            font-size: 1.7rem;
+            text-align: start;
+            margin: 0 0 1rem 1rem;
+          }
+        }
+      }
+      .page_wrapper {
+        position: absolute;
+        right: 10%;
+        bottom: 10%;
+        width: 100%;
+        span {
+          font-size: 5rem;
+          margin-top: 0;
+          &:last-child {
+            margin-top: 2rem;
+            font-size: 10rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .slide_wrapper {
+    .block {
+      .inner {
+        h1 {
+          font-size: 5rem;
+        }
+        .detail {
+          p {
+            font-size: 2rem;
+          }
+          .text {
+            font-size: 2rem;
+            width: 75%;
+          }
+          .detail_additional {
+            margin-top: 2rem;
+            span {
+              font-size: 1.2rem;
+              text-align: start;
+              margin: 0 0 1rem 1rem;
+            }
+          }
+        }
+        .page_wrapper {
+          span {
+            color: var(--font_color);
+            font-size: 5rem;
+            &:last-child {
+              margin-top: 2rem;
+              font-size: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: global.$mobile) {
+  .slide_wrapper {
+    height: 100vh;
+    .block {
+      .inner {
+        padding: 2rem;
+        h1 {
+          font-size: 4rem;
+        }
+        .detail {
+          p {
+            font-size: 1.5rem;
+          }
+          .text {
+            font-size: 1.3rem;
+            width: 100%;
+          }
+          .detail_additional {
+            margin-top: 1rem;
+            span {
+              font-size: 1.2rem;
+              text-align: start;
+              margin: 0 0 1rem 1rem;
+            }
+          }
+        }
+        .page_wrapper {
+          bottom: 6%;
+          span {
+            color: var(--font_color);
+            font-size: 5rem;
+            &:last-child {
+              margin-top: 2rem;
+              font-size: 6rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@use "../global/globalCss/global.scss" as global;
+.poster {
+  height: auto;
+  width: 100vw;
+}
+
+.poster_button {
+  .button {
+    height: 100vh;
+    font-size: 8rem;
+    font-style: italic;
+    transition: 1s ease-in-out;
+    background: none;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+    font-size: 8rem !important;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.442);
+      background-blend-mode: color-burn !important;
+    }
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+  .parallax {
+    padding: 0rem 6rem 2.5rem;
+    font-size: 2rem;
+  }
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+  .parallax {
+    padding: 0rem 5rem 2.5rem;
+    font-size: 2rem;
+  }
+  .poster_button {
+    .button {
+      height: 100vh;
+      font-size: 5rem !important;
+    }
+  }
+}
+@media (max-width: global.$mobile) {
+  .parallax {
+    padding: 0rem 2rem 2.5rem;
+    font-size: 1.5rem;
+  }
+  .poster_button {
+    display: block;
+    .button {
+      width: 100% !important;
+      font-size: 5rem;
+    }
+  }
+}

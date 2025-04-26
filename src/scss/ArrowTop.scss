@@ -1,0 +1,30 @@
+.arrow_wrapper{
+    position: fixed;
+    bottom: 0;
+    right:0;
+    z-index: 9999;
+    padding: 2rem;
+    .arrow_top{
+        height: 2rem;
+        width: 2rem;
+        border-top: 2px solid black ;
+        border-left: 2px solid black ;
+        transform: rotate(45deg);
+        transition: 1s ease-in-out;
+        &::before{
+            position:absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transform: scale(20%);
+            border-radius:50% ;
+            background-color: black;
+        }
+        &:hover{
+            cursor: pointer;
+            animation: 1s arrow_up alternate infinite;
+        }
+    }
+}

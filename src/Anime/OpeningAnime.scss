@@ -1,0 +1,101 @@
+@use "../global/globalCss/global.scss";
+
+.Anime_wrapper {
+  z-index: 9999999;
+  transition: 1s all ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  .FirstAnime {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: aquamarine;
+    background: url("../photos/Wedding4.jpg");
+    background-size: cover;
+    background-position: center;
+    .SecondAnime {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgb(127, 153, 255);
+      background: url("../photos/Wedding6.jpg");
+      background-size: cover;
+      background-position: center;
+      .skip {
+        position: absolute;
+        font-size: 4rem;
+        bottom: 50px;
+        left: 50px;
+        background-color: transparent;
+        letter-spacing: 2px;
+        color: aquamarine;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.65);
+        transition: 0.5s all ease-in-out;
+        &:hover {
+          transform: scale(1.2);
+          color: var(--button_active_color);
+        }
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          bottom: -5px;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background: white;
+          box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.65);
+        }
+        &::after {
+          bottom: -10px;
+          width: 40%;
+          height: 1px;
+        }
+      }
+      .bookmark_wrapper {
+        position: relative;
+        height: 100vh;
+        width: 10%;
+        min-width: 15vw;
+        background-color: transparent;
+        margin-right: 2rem;
+        padding: 0.5rem;
+        .bookmark {
+          position: relative;
+          height: 100%;
+          background-color: transparent;
+          h1 {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.65);
+            span {
+              font-size: 8rem;
+              width: 100%;
+              display: grid;
+              place-items: center;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: global.$labtop) and (max-width: global.$pc) {
+}
+@media (min-width: global.$mobile) and (max-width: global.$labtop) {
+}
+@media (max-width: global.$mobile) {
+  .FirstAnime {
+    background-image: url("../photos/Wedding3.jpg") !important;
+  }
+  .SecondAnime {
+    background-image: url("../photos/Wedding11.jpg") !important;
+  }
+  .bookmark > h1 > span {
+    font-size: 4rem !important;
+  }
+}
