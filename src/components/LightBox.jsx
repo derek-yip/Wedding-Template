@@ -20,11 +20,12 @@ function LightBox(props) {
         <div className="lightbox center_center" style={Style}>
           <div className="lightbox_inner center_center">
             <button onClick={() => CloseLightbox()}>X</button>
-            <ImagePreviewer
+            {/* <ImagePreviewer
               imageUrl={props.path}
               alt=""
               className="center_center"
-            />
+            /> */}
+            <img src={props.path} alt="" className="center_center" />
           </div>
         </div>
       </div>
