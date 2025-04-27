@@ -31,13 +31,15 @@ This is a pure front-end wedding template, using React and external packages to 
     <img src="https://user-images.githubusercontent.com/101183496/190864800-0365c9b3-77a4-4077-8dd6-10d1ad544422.png">
     <img src="https://user-images.githubusercontent.com/101183496/190864980-6c5c8fcf-17da-4aa7-8303-a3d6d7207943.png">
   </p>
- 
-[# Sliders
-  <p align="center">
+  
+ <!-- 
+ # Sliders
+ <p align="center">
     <img src="https://user-images.githubusercontent.com/101183496/190865023-7a6400a3-3770-41df-b3bd-a857b888eb28.png">
     <img src="https://user-images.githubusercontent.com/101183496/190865027-32c9795d-16e6-471c-805e-ed28e89b858f.png">
     <img src="https://user-images.githubusercontent.com/101183496/190865032-e3a2d2bc-919b-439b-9cb6-edb25095e4d6.png">
-  </p>](url)
+  </p>
+ -->
  
 #	Parallaxes
   <p align="center">
