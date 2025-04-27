@@ -25,7 +25,7 @@ function Story() {
           }
         />
         <BestWish />
-        <ScrollSlider direction={"horizontal"}>
+        {/* <ScrollSlider direction={"horizontal"}>
           <Slides
             background_img={"photos/slider/slide_pic_01.jpg"}
             heading={"OUR STORY"}
@@ -58,7 +58,7 @@ function Story() {
             }}
             page={"04"}
           />
-        </ScrollSlider>
+        </ScrollSlider> */}
         <Parallax
           height="60vh"
           background_img="photos/Background/bk_02.png"
