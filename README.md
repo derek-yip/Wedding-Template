@@ -6,7 +6,7 @@ This is a pure front-end wedding template, using React and external packages to 
 
 ## Live Demo
 
-[https://derek-yip.github.io/Wedding/](https://derek-yip.github.io/Wedding/)
+[https://wedding-template-derekyip.vercel.app/](https://wedding-template-derekyip.vercel.app/)
 
 ## Picture Demo
 
