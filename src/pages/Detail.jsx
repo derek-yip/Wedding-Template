@@ -20,7 +20,7 @@ function Mrs() {
   }
   return (
     <div className="locoscroll_wrapper">
-      <ScrollSlider direction={"verticle"}>
+      {/* <ScrollSlider direction={"verticle"}>
         <Slides
           background_img={"photos/slider/slide_pic_05.jpg"}
           heading={"Wedding Signing Ceremony"}
@@ -53,7 +53,7 @@ function Mrs() {
           }}
           page={"03"}
         />
-      </ScrollSlider>
+      </ScrollSlider> */}
       <div className="event_parties_wrapper">
         <div
           className="event_parties column_center_center"
