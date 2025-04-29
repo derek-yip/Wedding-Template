@@ -13,7 +13,6 @@ import Detail from "./pages/Detail";
 import Footer from "./global/globalJsx/Footer";
 import Header from "./global/globalJsx/Header";
 import ArrowTop from "./components/ArrowTop";
-import OpeningAnime from "./Anime/OpeningAnime";
 import PageNotFound from "./pages/pageNotFound";
 // import { UseLocoScrollWithGsap, UseLocoScroll} from '../globalJs/UseLocoScroll';
 
@@ -23,11 +22,12 @@ function App() {
 
     useEffect(() => {
       window.scrollTo(0, 0);
+      // Opening_Anime();
     }, [pathname]);
 
     return (
       <div>
-        <OpeningAnime />
+        {/* <OpeningAnime /> */}
         <Header />
         <Outlet />
         <Footer />

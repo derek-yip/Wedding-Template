@@ -21,7 +21,8 @@ function ImagePreviewer({ imageUrl, alt, className, onClick }) {
             setImageBlob(blob);
           } else {
             console.error(
-              "Invalid content type. Expected image/jpeg or image/png."
+              "Invalid content type. Expected image/jpeg or image/png.(URL: " +
+                imageUrl+")"
             );
             setError(true);
           }

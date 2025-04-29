@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import "../../scss/Header.scss";
-import { Opening_Anime } from "../../Anime/CustomAnime.js";
 
 function Header() {
   useEffect(() => {
@@ -16,7 +15,6 @@ function Header() {
             className="nav_item "
             onClick={() => {
               header_background();
-              Opening_Anime();
             }}
           >
             <Link to={"/"}>Home</Link>
@@ -25,7 +23,6 @@ function Header() {
             className="nav_item "
             onClick={() => {
               header_background();
-              Opening_Anime();
             }}
           >
             <Link to={"/Story"}>Story</Link>
@@ -34,7 +31,6 @@ function Header() {
             className="nav_item "
             onClick={() => {
               header_background();
-              Opening_Anime();
             }}
           >
             <Link to={"/Detail"}>Detail</Link>

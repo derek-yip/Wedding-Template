@@ -64,7 +64,7 @@ function Story() {
           background_img="photos/Background/bk_02.png"
           content="“You are the finest, loveliest, tenderest, and most beautiful person I have ever known and even that is an understatement.”"
           layout="bottom_center"
-          color="white"
+          color="black"
         />
         <div className="photo_section">
           <PhotoWrapper
